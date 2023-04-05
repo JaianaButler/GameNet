@@ -6,6 +6,14 @@ body {
   font-family: "Quicksand", sans-serif;
 }
 
+#logo {
+  width: 165px;
+  height: 165px;
+  position: relative;
+  left: 20%;
+  bottom: 65px;
+}
+
 #nav-container {
   overflow: hidden;
   position: fixed;
@@ -56,6 +64,8 @@ body {
   }
 
   #column-left {
+    display: flex;
+    justify-content: center;
   }
 
   #column-center {
