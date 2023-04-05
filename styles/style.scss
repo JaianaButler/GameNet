@@ -6,7 +6,7 @@ body {
   font-family: "Quicksand", sans-serif;
 }
 
-header {
+#nav-container {
   width: 100%;
   height: 70px;
   box-shadow: 0 0 4px rgb(160, 160, 160);
@@ -15,12 +15,12 @@ header {
   //background: transparent;
 }
 
-.header-inner-wrapper {
+#nav-inner-wrapper {
   width: 100%;
   height: 100%;
   display: flex;
 
-  .header-column {
+  .nav-column {
     flex: 1;
     height: 100%;
     padding: 8px 8px;
@@ -34,7 +34,7 @@ header {
                 left: 100px*/
       }
 
-      .header-nav {
+      #nav-content {
         text-align: center;
 
         ul {
@@ -53,16 +53,17 @@ header {
     }
   }
 
-  .column-left {
+  #column-left {
   }
 
-  .column-center {
+  #column-center {
     flex-grow: 2;
   }
 
-  .column-right {
+  #column-right {
   }
 }
+
 .main-content-wrapper {
   width: 100%;
   height: 100%;
