@@ -6,11 +6,15 @@ body {
 }
 
 #nav-container {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  z-index: 500;
   width: 100%;
   height: 70px;
   box-shadow: 0 0 4px rgb(160, 160, 160);
   padding: 10px 0;
-  z-index: 3;
+  background: white;
 }
 
 #nav-inner-wrapper {
@@ -42,14 +46,16 @@ body {
   display: inline-block;
   width: 19%;
   font-size: 12px;
-  padding: 10px 0.0005%;
+  padding: 10px 0.0005%; /* Responsive left/right spacing between items */
 }
 #nav-inner-wrapper #column-center {
   flex-grow: 2;
 }
-.main-content-wrapper {
+.main-content-container {
   width: 100%;
   height: 100%;
+  margin-top: 70px; /* Top margin to avoid content overlay with nav */
+  z-index: -1;
 }
 
 .jumbotron-wrapper {
