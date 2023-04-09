@@ -1,14 +1,14 @@
-const api_url = 'https://api.rawg.io/api/games/28/screenshots?key=cb97c37fb7a240e8bb7c42e4c27a5623';
-async function getHeaderThumbnail() {
-    const response = await fetch(api_url);
+const latest_screenshots_api_url = 'https://api.rawg.io/api/games/28/screenshots?key=cb97c37fb7a240e8bb7c42e4c27a5623';
+
+async function getLatestScreenshots() {
+    const response = await fetch(latest_screenshots_api_url);
     const data = await response.json()
     //console.log(data);
-    const gameImage = document.createElement('img');
-    gameImage.src= data.results[0].image;
-    document.getElementById('header-thumbnail').appendChild(gameImage);
+    const headerImage = document.createElement('img');
+    headerImage.src = data.results[0].image;
+    document.getElementById('header-thumbnail').appendChild(headerImage);
 }
-
-getHeaderThumbnail();
+getLatestScreenshots();
 
 
 /*fetch("https://rawg-video-games-database.p.rapidapi.com/games/3328", {
