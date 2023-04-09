@@ -14,6 +14,7 @@ body {
 }
 
 #nav-container {
+  /* Fixed position, hidden overflow, and high z-index so nav stays above content when scrolling */
   overflow: hidden;
   position: fixed;
   top: 0;
@@ -58,7 +59,7 @@ body {
 }
 #nav-inner-wrapper #column-left {
   display: flex;
-  justify-content: center;
+  justify-content: center; /* Centering for logo */
 }
 #nav-inner-wrapper #column-center {
   flex-grow: 2;
@@ -67,19 +68,44 @@ body {
   width: 100%;
   height: 100%;
   margin-top: 70px; /* Top margin to avoid content overlay with nav */
-  z-index: -1;
+}
+.page #main-content {
+  width: 100%;
 }
 .page #main-content .page-header-container {
   padding: 0 10%;
   margin: 8% 0;
+  /* Flex container with 2 to 1 layout */
+}
+.page #main-content .page-header-container .header-stack {
+  display: flex;
+  /* Main flex child */
+  /* Side flex child */
 }
 .page #main-content .page-header-container .header-stack #header-stack-main .stack-main-title h1 {
   padding: 2% 1%;
   font-size: 40px;
   font-weight: 700;
 }
-img {
-  height: 100%;
-  width: 66%;
+.page #main-content .page-header-container .header-stack #header-stack-main #header-thumbnail img {
+  width: 100%;
   border-radius: 24px;
+}
+.page #main-content .page-header-container .header-stack #header-stack-aside {
+  flex-basis: 80%; /* Take up roughly 1/3 of parent flex container */
+  padding-left: 40px;
+}
+.page #main-content .page-header-container .header-stack #header-stack-aside h2 {
+  padding: 6% 1% 1% 1%;
+  font-size: 30px;
+  font-weight: 400;
+}
+.page #main-content .page-header-container .header-stack #header-stack-aside .stack-content-container {
+  padding: 10px;
+}
+.page #main-content .page-header-container .header-stack #header-stack-aside .stack-content-container .stack-item-wrapper {
+  padding: 20px 0px;
+}
+.page #main-content .page-header-container .header-stack #header-stack-aside .stack-content-container .stack-item-wrapper .stack-item-title h3 {
+  font-size: 20px;
 }/*# sourceMappingURL=style.css.map */
