@@ -17,126 +17,137 @@ body {
   padding: 10px 0;
   background: white;
 }
-#nav-container #nav-inner-wrapper {
+
+#nav-inner-wrapper {
   width: 100%;
   height: 100%;
   display: flex;
 }
-#nav-container #nav-inner-wrapper .nav-column {
+
+.nav-column {
   flex: 1;
   height: 100%;
   padding: 8px 8px;
 }
-#nav-container #nav-inner-wrapper .nav-column .column-inner {
+.nav-column .column-inner {
   height: 100%;
 }
-#nav-container #nav-inner-wrapper .nav-column .column-inner #logo {
+.nav-column .column-inner #nav-content {
+  text-align: center;
+}
+.nav-column .column-inner #nav-content ul {
+  display: inline;
+  list-style-type: none;
+}
+.nav-column .column-inner #nav-content ul .nav-item {
+  display: inline-block;
+  width: 19%;
+  font-size: 12px;
+  padding: 10px 0.0005%; /* Responsive left/right spacing between items */
+}
+
+#column-left {
+  display: flex;
+  justify-content: center; /* Centering for logo */
+}
+#column-left img {
   width: 165px;
   height: 165px;
   position: relative;
   left: 20%;
   bottom: 65px;
 }
-#nav-container #nav-inner-wrapper .nav-column .column-inner #nav-content {
-  text-align: center;
-}
-#nav-container #nav-inner-wrapper .nav-column .column-inner #nav-content ul {
-  display: inline;
-  list-style-type: none;
-}
-#nav-container #nav-inner-wrapper .nav-column .column-inner #nav-content ul .nav-item {
-  display: inline-block;
-  width: 19%;
-  font-size: 12px;
-  padding: 10px 0.0005%; /* Responsive left/right spacing between items */
-}
-#nav-container #nav-inner-wrapper #column-left {
-  display: flex;
-  justify-content: center; /* Centering for logo */
-}
-#nav-container #nav-inner-wrapper #column-center {
+
+#column-center {
   flex-grow: 2;
 }
+
+/*** Page ***/
 .page {
   width: 100%;
   height: 100%;
   margin-top: 70px; /* Top margin to avoid content overlay with nav */
 }
-.page #main-content {
+
+#main-content {
   width: 100%;
 }
-.page #main-content .page-header-container {
+
+#page-header-container {
   padding: 0 8%;
-  margin: 8% 0;
-  /* Flex container with 2 to 1 layout */
+  margin: 115px 0;
 }
-.page #main-content .page-header-container .header-stack {
+
+/* Flex container with 2 to 1 layout */
+.header-stack {
   display: flex;
   flex-direction: column;
-  /* Main flex child */
-  /* Side flex child */
+  gap: 40px;
+  /* Main flex child with thumbnail */
+  /* Aside flex child */
 }
-.page #main-content .page-header-container .header-stack span {
+.header-stack span {
   color: rgb(227, 151, 36);
   font-weight: 200;
 }
-.page #main-content .page-header-container .header-stack #header-stack-main .stack-main-title h1 {
-  padding: 2% 0;
+.header-stack #header-stack-main {
+  width: 100%;
+}
+.header-stack #header-stack-main .stack-main-title h1 {
+  padding: 25px 0;
   font-size: 38px;
   font-weight: 700;
 }
-.page #main-content .page-header-container .header-stack #header-stack-main #header-thumbnail img {
+.header-stack #header-stack-main .thumbnail-wrapper img {
   width: 100%;
   border-radius: 5px;
 }
-.page #main-content .page-header-container .header-stack #header-stack-aside {
-  flex-basis: 50%; /* Take up roughly 1/3 of parent flex container */
-  margin-left: 40px;
+.header-stack #header-stack-aside {
   border: 1px solid rgb(235, 235, 235);
   border-radius: 5px;
 }
-.page #main-content .page-header-container .header-stack #header-stack-aside h2 {
-  padding: 8%;
+.header-stack #header-stack-aside h2 {
+  padding: 30px;
   font-size: 24px;
   font-weight: 600;
   border-bottom: 1px solid rgb(235, 235, 235);
 }
-.page #main-content .page-header-container .header-stack #header-stack-aside h4 {
+.header-stack #header-stack-aside h4 {
   padding: 6%;
   font-size: 12px;
   border-top: 1px solid rgb(235, 235, 235);
 }
-.page #main-content .page-header-container .header-stack #header-stack-aside .stack-content-container {
+.header-stack #header-stack-aside .stack-content-container {
   padding: 10px 30px;
 }
-.page #main-content .page-header-container .header-stack #header-stack-aside .stack-content-container .stack-item-wrapper {
+.header-stack #header-stack-aside .stack-content-container .stack-item-wrapper {
   display: flex;
   align-items: center;
   padding: 10px 0;
 }
-.page #main-content .page-header-container .header-stack #header-stack-aside .stack-content-container .stack-item-wrapper .thumbnail-wrapper img {
+.header-stack #header-stack-aside .stack-content-container .stack-item-wrapper .thumbnail-wrapper img {
   height: 64px;
   border-radius: 5px;
 }
-.page #main-content .page-header-container .header-stack #header-stack-aside .stack-content-container .stack-item-wrapper .block-text {
+.header-stack #header-stack-aside .stack-content-container .stack-item-wrapper .block-text-wrapper {
   padding-left: 20px;
   padding-bottom: 10px;
 }
-.page #main-content .page-header-container .header-stack #header-stack-aside .stack-content-container .stack-item-wrapper .block-text .time-wrapper {
+.header-stack #header-stack-aside .stack-content-container .stack-item-wrapper .block-text-wrapper .time-wrapper {
   padding-bottom: 6px;
 }
-.page #main-content .page-header-container .header-stack #header-stack-aside .stack-content-container .stack-item-wrapper .block-text .time-wrapper time {
+.header-stack #header-stack-aside .stack-content-container .stack-item-wrapper .block-text-wrapper .time-wrapper time {
   font-size: 10px;
   font-weight: 600;
 }
-.page #main-content .page-header-container .header-stack #header-stack-aside .stack-content-container .stack-item-wrapper .block-text .title-wrapper h3 {
+.header-stack #header-stack-aside .stack-content-container .stack-item-wrapper .block-text-wrapper .title-wrapper h3 {
   font-size: 18px;
   font-weight: 300;
   padding-bottom: 6px;
 }
-.page #main-content .page-header-container .header-stack #header-stack-aside .stack-content-container .stack-item-wrapper .block-text .comments-wrapper i {
+.header-stack #header-stack-aside .stack-content-container .stack-item-wrapper .block-text-wrapper .comments-wrapper i {
   font-size: 10px;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 /* Extra small devices (phones, 600px and down) */
@@ -157,10 +168,40 @@ body {
   #nav-container {
     background: orange;
   }
+  .header-stack {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+  }
+  #page-header-container {
+    padding: 0 6%;
+  }
 }
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
   #nav-container {
     background: red;
+  }
+  .header-stack #header-stack-main {
+    width: 70%;
+  }
+  .header-stack #header-stack-aside {
+    width: 30%;
+    gap: 60px;
+  }
+  .header-stack #header-stack-aside .stack-content-container .stack-item-wrapper {
+    padding: 20px 0;
+  }
+  .header-stack #header-stack-aside .stack-content-container .stack-item-wrapper .block-text-wrapper .time-wrapper time {
+    font-size: 14px;
+  }
+  .header-stack #header-stack-aside .stack-content-container .stack-item-wrapper .block-text-wrapper .title-wrapper h3 {
+    font-size: 20px;
+  }
+  .header-stack #header-stack-aside .stack-content-container .stack-item-wrapper .block-text-wrapper .comments-wrapper i {
+    font-size: 14px;
+  }
+  #page-header-container {
+    padding: 0 10%;
   }
 }/*# sourceMappingURL=style.css.map */
