@@ -1,11 +1,11 @@
-const latest_screenshots_api_url = 'https://api.rawg.io/api/games/28/screenshots?key=cb97c37fb7a240e8bb7c42e4c27a5623';
+const latest_screenshots_api_url = 'https://api.rawg.io/api/games/906547/screenshots?key=cb97c37fb7a240e8bb7c42e4c27a5623';
 
 async function getLatestScreenshots() {
     const response = await fetch(latest_screenshots_api_url);
     const data = await response.json()
     //console.log(data);
     const headerImage = document.createElement('img');
-    headerImage.src = data.results[0].image;
+    headerImage.src = data.results[1].image;
     document.getElementById('header-thumbnail').appendChild(headerImage);
 }
 getLatestScreenshots();
