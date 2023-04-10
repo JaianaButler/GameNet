@@ -5,14 +5,6 @@ body {
   font-family: "Roboto Flex", sans-serif;
 }
 
-#logo {
-  width: 165px;
-  height: 165px;
-  position: relative;
-  left: 20%;
-  bottom: 65px;
-}
-
 #nav-container {
   /* Fixed position, hidden overflow, and high z-index so nav stays above content when scrolling */
   overflow: hidden;
@@ -25,43 +17,44 @@ body {
   padding: 10px 0;
   background: white;
 }
-
-#nav-inner-wrapper {
+#nav-container #nav-inner-wrapper {
   width: 100%;
   height: 100%;
   display: flex;
 }
-#nav-inner-wrapper .nav-column {
+#nav-container #nav-inner-wrapper .nav-column {
   flex: 1;
   height: 100%;
   padding: 8px 8px;
 }
-#nav-inner-wrapper .nav-column .column-inner {
+#nav-container #nav-inner-wrapper .nav-column .column-inner {
   height: 100%;
 }
-#nav-inner-wrapper .nav-column .column-inner a {
-  /*position: relative;
-          bottom: 65px;
-          left: 100px*/
+#nav-container #nav-inner-wrapper .nav-column .column-inner #logo {
+  width: 165px;
+  height: 165px;
+  position: relative;
+  left: 20%;
+  bottom: 65px;
 }
-#nav-inner-wrapper .nav-column .column-inner #nav-content {
+#nav-container #nav-inner-wrapper .nav-column .column-inner #nav-content {
   text-align: center;
 }
-#nav-inner-wrapper .nav-column .column-inner #nav-content ul {
+#nav-container #nav-inner-wrapper .nav-column .column-inner #nav-content ul {
   display: inline;
   list-style-type: none;
 }
-#nav-inner-wrapper .nav-column .column-inner #nav-content ul .nav-item {
+#nav-container #nav-inner-wrapper .nav-column .column-inner #nav-content ul .nav-item {
   display: inline-block;
   width: 19%;
   font-size: 12px;
   padding: 10px 0.0005%; /* Responsive left/right spacing between items */
 }
-#nav-inner-wrapper #column-left {
+#nav-container #nav-inner-wrapper #column-left {
   display: flex;
   justify-content: center; /* Centering for logo */
 }
-#nav-inner-wrapper #column-center {
+#nav-container #nav-inner-wrapper #column-center {
   flex-grow: 2;
 }
 .page {
@@ -79,6 +72,7 @@ body {
 }
 .page #main-content .page-header-container .header-stack {
   display: flex;
+  flex-direction: column;
   /* Main flex child */
   /* Side flex child */
 }
@@ -143,4 +137,30 @@ body {
 .page #main-content .page-header-container .header-stack #header-stack-aside .stack-content-container .stack-item-wrapper .block-text .comments-wrapper i {
   font-size: 10px;
   font-weight: 600;
+}
+
+/* Extra small devices (phones, 600px and down) */
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  #nav-container {
+    background: green;
+  }
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  #nav-container {
+    background: yellow;
+  }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  #nav-container {
+    background: orange;
+  }
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  #nav-container {
+    background: red;
+  }
 }/*# sourceMappingURL=style.css.map */
