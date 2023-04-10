@@ -1,82 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/reset.css" />
+    <link rel="stylesheet" href="styles/style.css" />
 
-    <link rel="stylesheet" href="styles/reset.css">
-    <link rel="stylesheet" href="styles/style.css">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
 
     <title>GameNet</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <!-- Navigation -->
     <div id="nav-container">
-        <div id="nav-inner-wrapper">
-            <div class="nav-column" id="column-left"> <!-- Nav logo section -->
-                <div class="column-inner">
-                    <img src="./images/GameNet Logo.png" alt="GameNet" id="logo" />
-                </div>
-            </div>
-            <div class="nav-column" id="column-center"> <!-- Nav content section -->
-                <div class="column-inner">
-                    <nav id="nav-content">
-                        <ul>
-                            <li class="nav-item">
-                                <a>HOME</a>
-                            </li>
-                            <li class="nav-item">
-                                <a>REVIEWS</a>
-                            </li>
-                            <li class="nav-item">
-                                <a>DISCOVER</a>
-                            </li>
-                            <li class="nav-item">
-                                <a>NEWS</a>
-                            </li>
-                            <li class="nav-item">
-                                <a>STORE</a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-            <div class="nav-column" id="column-right">
-                <div class="column-inner">
-
-                </div>
-            </div>
+      <div id="nav-inner-wrapper">
+        <div class="nav-column" id="column-left">
+          <!-- Nav logo section -->
+          <div class="column-inner">
+            <img src="./images/GameNet Logo.png" alt="GameNet" id="logo" />
+          </div>
         </div>
+        <div class="nav-column" id="column-center">
+          <!-- Nav content section -->
+          <div class="column-inner">
+            <nav id="nav-content">
+              <ul>
+                <li class="nav-item">
+                  <a>HOME</a>
+                </li>
+                <li class="nav-item">
+                  <a>REVIEWS</a>
+                </li>
+                <li class="nav-item">
+                  <a>DISCOVER</a>
+                </li>
+                <li class="nav-item">
+                  <a>NEWS</a>
+                </li>
+                <li class="nav-item">
+                  <a>STORE</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="nav-column" id="column-right">
+          <div class="column-inner"></div>
+        </div>
+      </div>
     </div>
 
     <!-- Page Content -->
     <div class="page">
-        <main id="main-content">
-            <div class="page-header-container">
-                <div class="header-stack">
-                    <div id="header-stack-main"> <!-- Header large thumbnail section -->
-                        <div class="stack-main-title"><h1>Latest News <span>\</span> </h1>
-                        <i class='far fa-comment-dots'></i>
-                        </div>
-                        <div class="thumbnail-wrapper" id="header-thumbnail"></div>
-                    </div>
-                    <aside id="header-stack-aside"> <!-- Header aside section -->
-                        <h2>Popular Reviews <span>\</span></h2>
-                        <div class="stack-content-container" id="top-rated">
-                        </div>
-                        <h4>VIEW MORE REVIEWS</h4>
-                    </div>
-                </div>
+      <main id="main-content">
+        <div class="page-header-container">
+          <div class="header-stack">
+            <div id="header-stack-main">
+              <!-- Header large thumbnail section -->
+              <div class="stack-main-title">
+                <h1>Latest News <span>\</span></h1>
+                <i class="far fa-comment-dots"></i>
+              </div>
+              <div class="thumbnail-wrapper" id="header-thumbnail"></div>
             </div>
-        </main>
+            <aside id="header-stack-aside">
+              <!-- Header aside section -->
+              <h2>Popular Reviews <span>\</span></h2>
+              <div class="stack-content-container" id="top-rated"></div>
+              <h4>VIEW MORE REVIEWS</h4>
+            </aside>
+          </div>
+        </div>
+      </main>
     </div>
 
     <script src="js/getLatestScreenshots.js"></script>
     <script src="js/getPopularData.js"></script>
-</body>
-
+  </body>
 </html>
