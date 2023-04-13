@@ -5,8 +5,8 @@ body {
   font-family: "Roboto Flex", sans-serif;
 }
 
+/* Fixed nav menu */
 #nav-container {
-  /* Fixed position, hidden overflow, and high z-index so nav stays above content when scrolling */
   overflow: hidden;
   position: fixed;
   top: 0;
@@ -34,6 +34,7 @@ body {
 }
 .nav-column .column-inner #nav-content {
   text-align: center;
+  display: none;
 }
 .nav-column .column-inner #nav-content ul {
   display: inline;
@@ -43,14 +44,17 @@ body {
   display: inline-block;
   width: 19%;
   font-size: 12px;
-  padding: 10px 0.0005%; /* Responsive left/right spacing between items */
+  padding: 10px 0.0005%; /* Responsive left/right spacing between nav items */
 }
 
+/* Nav divided into three columns */
 #column-left {
   display: flex;
   justify-content: center; /* Centering for logo */
+  /* Left nav logo and icon */
 }
-#column-left img {
+#column-left .logo {
+  display: none;
   width: 165px;
   height: 165px;
   position: relative;
@@ -60,6 +64,13 @@ body {
 
 #column-center {
   flex-grow: 2;
+}
+#column-center .logo {
+  width: 165px;
+  height: 165px;
+  position: relative;
+  left: 20%;
+  bottom: 65px;
 }
 
 /*** Page ***/
@@ -78,7 +89,7 @@ body {
   margin: 115px 0;
 }
 
-/* Flex container with 2 to 1 layout */
+/* Flex container to support main section and aside with approx. 2-to-1 sizing */
 .header-stack {
   display: flex;
   flex-direction: column;
@@ -175,6 +186,15 @@ body {
   }
   #page-header-container {
     padding: 0 6%;
+  }
+  #column-left .logo {
+    display: inline;
+  }
+  #column-center .logo {
+    display: none;
+  }
+  .nav-column .column-inner #nav-content {
+    display: inline;
   }
 }
 /* Extra large devices (large laptops and desktops, 1200px and up) */
