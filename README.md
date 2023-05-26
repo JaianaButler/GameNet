@@ -1,2 +1,2 @@
 # GamePlug
-Online video game store
+Online video game news and reviews
